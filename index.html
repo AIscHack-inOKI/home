@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI学内ハッカソンin沖縄高専</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.309.0/dist/umd/lucide.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">AI学内ハッカソンin沖縄高専</div>
+        <nav class="desktop-nav">
+          <button class="nav-link" data-target="overview">イベント概要</button>
+          <button class="nav-link" data-target="schedule">日程</button>
+          <button class="nav-link" data-target="participation">参加方法</button>
+          <button class="nav-link" data-target="organizer">運営情報</button>
+        </nav>
+        <button class="mobile-menu-button" aria-label="メニュー">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <button class="nav-link" data-target="overview">イベント概要</button>
+    <button class="nav-link" data-target="schedule">日程</button>
+    <button class="nav-link" data-target="participation">参加方法</button>
+    <button class="nav-link" data-target="organizer">運営情報</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>AI学内ハッカソンin沖縄高専</h1>
+      <p>AI×高専生の技術で夏休みをハックしよう！</p>
+      <button class="button primary" data-target="participation">
+        参加する
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section id="overview" class="section">
+    <div class="container">
+      <div class="section-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 16v-4M12 8h.01"/>
+        </svg>
+        <h2>イベント概要</h2>
+      </div>
+      <div class="grid-2">
+        <div class="text-content">
+          <p>
+            このイベントは、沖縄工業高等専門学校の学生を対象に、ハッカソン形式でチーム開発を体験し、技術力とチームワークを向上させることを目的とします。
+          </p>
+          <p>
+            また、参加者同士の交流の場も設けており、新たなつながりを作る機会としてもご活用いただけます。初心者から上級者まで、幅広い層の方々にお楽しみいただける内容となっています。
+          </p>
+        </div>
+        <div class="image-container">
+          <img src="https://placehold.co/600x300" alt="イベントイメージ">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        <h2>日程</h2>
+      </div>
+      <div class="schedule-container">
+        <!-- Day 1 -->
+        <div class="card">
+          <div class="schedule-header">
+            <div>
+              <h3>1日目: オープニングセッション ~ 開発開始</h3>
+              <p class="text-muted">2025年7月14日 (月) 17:00 - 18:40</p>
+            </div>
+            <div class="location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>沖縄高専 メディア棟 視聴覚ホール</span>
+            </div>
+          </div>
+          <div class="schedule-timeline">
+            <div class="timeline-item">
+              <p class="time">16:30 - 16:40</p>
+              <p class="event">開場・受付</p>
+            </div>
+            <div class="timeline-item">
+              <p class="time">16:40</p>
+              <p class="event">開会</p>
+            </div>
+            <div class="timeline-item">
+              <p class="time">16:40 - 17:00</p>
+              <p class="event">アイスブレイク</p>
+            </div>
+            <div class="timeline-item">
+              <p class="time">17:00 - 18:30</p>
+              <p class="event">技術紹介・環境構築</p>
+            </div>
+            <div class="timeline-item">
+              <p class="time">18:30</p>
+              <p class="event">作るものが決まったチームから解散</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="card">
+          <div class="schedule-header">
+            <div>
+              <h3>2日目: 自由開発日</h3>
+              <p class="text-muted">2025年7月15日 (火) </p>
+            </div>
+            <div class="location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>各チーム自由な場所</span>
+            </div>
+          </div>
+          <div class="schedule-timeline">
+            <div class="timeline-item">
+              <p class="time">放課後 - 23:00</p>
+              <p class="event">各チーム開発・スライド作成</p>
+            </div>
+            <div class="timeline-item">
+              <p class="time">23:00</p>
+              <p class="event">各チーム制作物紹介スライド提出（１枚）</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="card">
+          <div class="schedule-header">
+            <div>
+              <h3>3日目: 制作物発表・交流会</h3>
+              <p class="text-muted">2025年7月16日 (水) 16:30 - 18:30</p>
+            </div>
+            <div class="location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>沖縄高専 メディア棟 視聴覚ホール</span>
+            </div>
+          </div>
+          <div class="schedule-timeline">
+            <div class="timeline-item">
+              <p class="time">16:30 - 16:40</p>
+              <p class="event">開場・集合</p>
+            </div>
+            <div class="timeline-item">
+              <p class="time">16:40 - 17:10</p>
+              <p class="event">最終調整</p>
+            </div>
+            <div class="timeline-item">
+              <p class="time">17:10 - 18:00</p>
+              <p class="event">各チーム作品発表(発表5分/入れ替え1分)</p>
+            </div>
+            <div class="timeline-item">
+              <p class="time">18:00 - 18:30</p>
+              <p class="event">交流会</p>
+            </div>
+            <div class="timeline-item">
+                <p class="time">18:30</p>
+                <p class="event">閉会・解散</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Participation Section -->
+  <section id="participation" class="section">
+    <div class="container">
+      <div class="section-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <h2>参加方法</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="step-number">1</div>
+          <h3>参加登録</h3>
+          <p>下記の申し込みフォームから必要事項を入力して登録してください。</p>
+          <button class="button primary full-width">申し込みフォーム</button>
+        </div>
+        <div class="card">
+          <div class="step-number">2</div>
+          <h3>参加確認</h3>
+          <p>登録完了後、確認メールをお送りします。</p>
+          <div class="price-box">
+            <p class="price-label">参加費</p>
+            <p class="price">無料</p>
+            <p class="price-note">※事前登録が必要です</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step-number">3</div>
+          <h3>コミュニティサーバーへの参加</h3>
+          <p>登録確認後、当イベントのコミュニティサーバー(Discode)に招待致します。</p>
+          <p class="note">※参加は任意ですが、各チームごとのプライベートチャンネルや、参加者の交流チャンネルも用意しております。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizer Section -->
+  <section id="organizer" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 16v-4M12 8h.01"/>
+        </svg>
+        <h2>運営情報</h2>
+      </div>
+      <div class="grid-2">
+        <div class="organizer-info">
+          <div class="info-group">
+            <h3>代表</h3>
+            <p>2年 情報通信システム工学科　上原 功大</p>
+          </div>
+          <div class="info-group">
+            <h3>メンバー</h3>
+            <p>2年 メディア情報工学科　喜友名 朝舜</p>
+            <p>2年 メディア情報工学科　新垣 輝</p>
+            <p>2年 機械システム工学科　助名 詩海斗</p>
+          </div>
+          <div class="info-group">
+            <h3>お問い合わせ</h3>
+            <p>
+              AI学内ハッカソン公式<br>
+              Email: xxxxxx<br>
+              𝕏:旧Twitter: xxxxxx
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>会場</h3>
+          <div class="map-container">
+            <div class="map-placeholder">会場の画像を表示</div>
+          </div>
+          <div class="venue-info">
+            <p class="venue-name">視聴覚ホール</p>
+
+            <div class="venue-access">
+              <p>沖縄工業高等専門学校</p>
+              <p>メディア棟3,4階</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">AI学内ハッカソンin沖縄高専</div>
+          <p>© 2025 第一回 AI学内ハッカソンin沖縄高専運営陣 All rights reserved.</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
