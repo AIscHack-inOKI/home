@@ -7,12 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileNav.classList.toggle('active');
   });
 
-  // Smooth scrolling for navigation links and buttons
-  const navLinks = document.querySelectorAll('.nav-link');
-  const scrollButtons = document.querySelectorAll('button[data-target]');
-  
   // Function to handle scrolling
-  function handleScroll(targetId) {
+  function scrollToSection(targetId) {
     // Close mobile menu if open
     if (mobileNav.classList.contains('active')) {
       mobileNav.classList.remove('active');
@@ -43,24 +39,23 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Add click event to nav links
+  const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('data-target');
-      handleScroll(targetId);
+      scrollToSection(targetId);
     });
   });
   
-  // Add click event to other buttons with data-target attribute
-  scrollButtons.forEach(button => {
-    if (!button.classList.contains('nav-link')) { // Avoid duplicating event listeners for nav links
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('data-target');
-        handleScroll(targetId);
-      });
-    }
-  });
+  // Add click event to the hero button
+  const heroButton = document.querySelector('.hero .button[data-target]');
+  if (heroButton) {
+    heroButton.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      scrollToSection(targetId);
+    });
+  }
 
   // Highlight active section in navigation
   const sections = document.querySelectorAll('section[id]');
@@ -69,19 +64,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollPosition = window.scrollY;
     const headerHeight = document.querySelector('.header').offsetHeight;
     
+    // Reset all navigation links to default color first
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.style.color = '';
+    });
+    
     // Check if we're at the top of the page
     if (scrollPosition < 100) {
-      document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('data-target') === 'top') {
-          link.style.color = 'var(--primary)';
-        } else {
-          link.style.color = '';
-        }
+      document.querySelectorAll('.nav-link[data-target="top"]').forEach(link => {
+        link.style.color = 'var(--primary)';
       });
       return;
     }
     
-    // Otherwise check which section is in view
+    // Check which section is in view and highlight corresponding nav link
+    let activeSection = false;
+    
     sections.forEach(section => {
       const sectionTop = section.offsetTop - headerHeight - 100; // Add some buffer
       const sectionHeight = section.offsetHeight;
@@ -91,12 +89,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll(`.nav-link[data-target="${sectionId}"]`).forEach(link => {
           link.style.color = 'var(--primary)';
         });
-      } else {
-        document.querySelectorAll(`.nav-link[data-target="${sectionId}"]`).forEach(link => {
-          link.style.color = '';
-        });
+        activeSection = true;
       }
     });
+    
+    // If no section is active and we're not at the top, don't highlight any link
+    if (!activeSection && scrollPosition >= 100) {
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.style.color = '';
+      });
+    }
   }
   
   window.addEventListener('scroll', highlightNavigation);
