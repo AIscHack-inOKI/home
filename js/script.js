@@ -7,8 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileNav.classList.toggle('active');
   });
 
+  // Smooth scrolling for navigation links and buttons
+  const navLinks = document.querySelectorAll('.nav-link');
+  const scrollButtons = document.querySelectorAll('button[data-target]');
+  
   // Function to handle scrolling
-  function scrollToSection(targetId) {
+  function handleScroll(targetId) {
     // Close mobile menu if open
     if (mobileNav.classList.contains('active')) {
       mobileNav.classList.remove('active');
@@ -39,23 +43,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Add click event to nav links
-  const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('data-target');
-      scrollToSection(targetId);
+      handleScroll(targetId);
     });
   });
   
-  // Add click event to the hero button
-  const heroButton = document.querySelector('.hero .button[data-target]');
-  if (heroButton) {
-    heroButton.addEventListener('click', function() {
-      const targetId = this.getAttribute('data-target');
-      scrollToSection(targetId);
-    });
-  }
+  // Add click event to other buttons with data-target attribute
+  scrollButtons.forEach(button => {
+    if (!button.classList.contains('nav-link')) { // Avoid duplicating event listeners for nav links
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        handleScroll(targetId);
+      });
+    }
+  });
 
   // Highlight active section in navigation
   const sections = document.querySelectorAll('section[id]');
