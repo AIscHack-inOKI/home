@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI学内ハッカソンin沖縄高専</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.309.0/dist/umd/lucide.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI学内ハッカソンin沖縄高専</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.309.0/dist/umd/lucide.min.css">
 </head>
 <body>
 <!-- Header -->
 <header class="header">
     <div class="container">
-      <div class="header-content">
-        <div class="logo">AI学内ハッカソンin沖縄高専</div>
-        <nav class="desktop-nav">
-          <button class="nav-link" data-target="top">トップ</button>
-          <button class="nav-link" data-target="overview">イベント概要</button>
-          <button class="nav-link" data-target="schedule">日程</button>
-          <button class="nav-link" data-target="participation">参加方法</button>
-          <button class="nav-link" data-target="organizer">運営情報</button>
-        </nav>
-        <button class="mobile-menu-button" aria-label="メニュー">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="4" x2="20" y1="12" y2="12" />
-            <line x1="4" x2="20" y1="6" y2="6" />
-            <line x1="4" x2="20" y1="18" y2="18" />
-          </svg>
-        </button>
-      </div>
+        <div class="header-content">
+            <div class="logo">AI学内ハッカソンin沖縄高専</div>
+                <nav class="desktop-nav">
+                    <button class="nav-link" data-target="top">トップ</button>
+                    <button class="nav-link" data-target="overview">イベント概要</button>
+                    <button class="nav-link" data-target="schedule">日程</button>
+                    <button class="nav-link" data-target="participation">参加方法</button>
+                    <button class="nav-link" data-target="faq">よくある質問</button>
+                  <button class="nav-link" data-target="organizer">運営情報</button>
+                </nav>
+                <button class="mobile-menu-button" aria-label="メニュー">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12" />
+                    <line x1="4" x2="20" y1="6" y2="6" />
+                    <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+            </button>
+        </div>
     </div>
-  </header>
+</header>
   
   <!-- Mobile Navigation -->
   <div class="mobile-nav">
@@ -38,6 +39,7 @@
     <button class="nav-link" data-target="overview">イベント概要</button>
     <button class="nav-link" data-target="schedule">日程</button>
     <button class="nav-link" data-target="participation">参加方法</button>
+    <button class="nav-link" data-target="faq">よくある質問</button>
     <button class="nav-link" data-target="organizer">運営情報</button>
   </div>
 
@@ -46,7 +48,7 @@
     <div class="container">
       <h1>AI学内ハッカソンin沖縄高専</h1>
       <p>AI×高専生の技術で夏休みをハックしよう！</p>
-      <button class="button primary">
+      <button class="button primary" data-target="participation">
         参加する
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
           <path d="M12 5v14M5 12l7 7 7-7"/>
@@ -235,6 +237,82 @@
           <h3>コミュニティサーバーへの参加</h3>
           <p>登録確認後、当イベントのコミュニティサーバー(Discode)に招待致します。</p>
           <p class="note">※参加は任意ですが、各チームごとのプライベートチャンネルや、参加者の交流チャンネルも用意しております。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+          <path d="M12 17h.01"/>
+        </svg>
+        <h2>よくある質問</h2>
+      </div>
+      
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <input type="checkbox" id="q1" class="faq-toggle">
+          <label for="q1" class="faq-question">
+            <span>参加に必要なスキルはありますか？</span>
+            <span class="faq-icon"></span>
+          </label>
+          <div class="faq-answer">
+            <p>特別なスキルは必要ありません。初心者の方も歓迎します。基本的なプログラミングの知識があれば十分参加できます。チーム内でスキルを補い合うことも学びの一環です。</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <input type="checkbox" id="q2" class="faq-toggle">
+          <label for="q2" class="faq-question">
+            <span>チームはどのように決まりますか？</span>
+            <span class="faq-icon"></span>
+          </label>
+          <div class="faq-answer">
+            <p>初日のアイスブレイクセッションでチーム分けを行います。事前に一緒に参加したい仲間がいる場合は、申し込み時にその旨をお知らせください。</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <input type="checkbox" id="q3" class="faq-toggle">
+          <label for="q3" class="faq-question">
+            <span>自分のパソコンを持参する必要がありますか？</span>
+            <span class="faq-icon"></span>
+          </label>
+          <div class="faq-answer">
+            <p>はい、開発作業を行うため、ご自身のノートパソコンをご持参ください。必要なソフトウェアについては、初日にセットアップのサポートを行います。</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <input type="checkbox" id="q4" class="faq-toggle">
+          <label for="q4" class="faq-question">
+            <span>途中参加や途中退出は可能ですか？</span>
+            <span class="faq-icon"></span>
+          </label>
+          <div class="faq-answer">
+            <p>基本的には全日程の参加をお願いしていますが、やむを得ない事情がある場合は事前にご相談ください。チームメンバーへの配慮をお願いします。</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <input type="checkbox" id="q5" class="faq-toggle">
+          <label for="q5" class="faq-question">
+            <span>制作物の著作権はどうなりますか？</span>
+            <span class="faq-icon"></span>
+          </label>
+          <div class="faq-answer">
+            <p>制作物の著作権は制作者（チーム）に帰属します。ただし、イベントの記録や広報目的で作品の画像や概要を公開させていただく場合があります。</p>
+          </div>
         </div>
       </div>
     </div>
