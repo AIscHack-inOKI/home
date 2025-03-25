@@ -560,3 +560,16 @@ p {
     max-width: 90%;
   }
 }
+
+/* リンクボタンのスタイル */
+a.button {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ホバー時も下線を表示しない */
+a.button:hover {
+  text-decoration: none;
+}
